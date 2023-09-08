@@ -1,0 +1,272 @@
+/* Filters */
+
+.category-list {
+  overflow: hidden;
+}
+
+.ais-RefinementList-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.ais-RefinementList-item {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px;
+  color: #000000;
+  border-bottom: none;
+  cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.ais-RefinementList-item:hover {
+  background-color: transparent;
+}
+
+.ais-RefinementList-labelText {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.ais-RefinementList-item--selected {
+  color: none;
+  border-bottom: none;
+}
+
+.ais-RefinementList-count {
+  display: none;
+}
+
+input.ais-RefinementList-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #999999;
+  border-radius: 2px;
+}
+
+input.ais-RefinementList-checkbox:checked {
+  border: 2px solid #00AEEF;
+  background-color: #00AEEF;
+  background-image: url(https://uploads-ssl.webflow.com/64416928859cbdd1716d79ce/64936a392fe82627d9cedf08_checkmark.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+label.ais-RefinementList-label {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+/* Hits */
+
+.ais-Hits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.ais-Hits-item {
+  border-bottom: none;
+  padding: 0px;
+}
+
+.hit {
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.hit-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.subtopic-episodes {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 0px;
+  margin-bottom: 40px;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.subtopic-timestamps {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  row-gap: 40px;
+  flex-direction: column;
+}
+
+[algolia-category="Timestamp"] .hit-category {
+  display: none;
+}
+
+.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+  width: 157px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-title {
+  font-size: 16px;
+}
+
+.months-list > li {
+  margin-bottom: 80px;
+}
+
+.subtopics-list, .months-list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.subtopic-item {
+  margin-bottom: 80px;
+}
+
+.subtopic-timestamps-wrapper {
+  padding: 40px;
+  background-color: #F2F2F2;
+}
+
+/* Infinite Hits */
+
+.ais-InfiniteHits-loadMore {
+  display: flex;
+  padding: 14px 28px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 48px;
+  background: #00AEEF;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.ais-InfiniteHits-loadMore:hover {
+  background-color: #009DD7;
+}
+
+.ais-InfiniteHits-loadMore:active {
+  background-color: #007AA7;
+}
+
+.ais-InfiniteHits-loadMore--disabled {
+  display: none;
+}
+
+.ais-InfiniteHits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.ais-InfiniteHits-item {
+  border-bottom: none;
+  padding: 0px;
+}
+
+.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+  width: 157px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-title {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ais-Hits-item:has(> [algolia-category="Timestamp"]) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .ais-InfiniteHits-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .subtopic-episodes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ais-Hits-item:has(> [algolia-category="Timestamp"]) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit {
+    flex-direction: column;
+  }
+
+  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .ais-InfiniteHits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+    flex-direction: column;
+  }
+
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .subtopic-episodes {
+    grid-template-columns: 1fr;
+  }
+}

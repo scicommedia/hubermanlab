@@ -1,0 +1,36 @@
+.ais-Hits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 56px;
+  column-gap: 40px;
+}
+
+@media screen and (max-width: 991px) {
+  .ais-Hits-list {
+    column-gap: 24px;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ais-Hits-item {
+  padding: 0px;
+  border-bottom: none;
+}
+
+.hit {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.hit-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
