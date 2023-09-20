@@ -263,7 +263,7 @@ const supercastLogin = document.querySelectorAll('[supercast="login"]');
 
 supercastLogin.forEach((element) => {
     element.addEventListener("click", (event) => {
-        Supercast.startLogin("https://hubermanlab.supercast.com/");
+      Supercast.startLogin({subdomain: "hubermanlab"})
     });
 }
 );
