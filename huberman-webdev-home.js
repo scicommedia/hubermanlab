@@ -15,7 +15,7 @@ const search = instantsearch({
 search.addWidgets([
   instantsearch.widgets.configure({
     filters:
-      "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series'"
+      "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series' OR category.name:'Journal Club'"
   }),
 
   instantsearch.widgets.hits({
