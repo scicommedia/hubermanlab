@@ -13,7 +13,7 @@ search.addWidgets([
 
   instantsearch.widgets.configure({
       filters:
-          "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series'"
+          "hasTranscript:true"
   }),
 
   instantsearch.widgets.searchBox({
@@ -39,7 +39,6 @@ search.addWidgets([
           <div class="paragraph-small u-text-black u-mb-0-5" algolia-date >{{postDate}}</div>
           <p class="h7 u-mb-1" episode-card><a card-title class="u-text-black" href="{{link}}">{{name}}</a></p>
           <div>
-              <a class="btn-pdf u-mr-0-5 u-mb-1" href="#">Download Transcript</a>
               <a class="btn-outline u-mb-1" href="{{link}}?transcript=1">Read Transcript</a>
           </div>
         </div>
