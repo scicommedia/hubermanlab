@@ -272,10 +272,11 @@ supercastLogin.forEach((element) => {
 let logout = document.querySelector('[supercast-logout]');
 
 if (logout) {
-    logout.addEventListener('click', function() {
-        document.cookie = '_supercast_session=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-        window.location.href = '/';
-    });
+  logout.addEventListener('click', function() {
+      let cookie = document.cookie.split('; ').find(row => row.startsWith('_supercast_session'));
+      document.cookie = cookie + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      window.location.href = '/';
+  });
 }
 
 
