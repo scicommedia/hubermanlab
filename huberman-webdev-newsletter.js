@@ -32,7 +32,8 @@ search.addWidgets([
 
   instantsearch.widgets.pagination({
     container: "#pagination",
-    padding: 2
+    padding: 2,
+    scrollTo: "#archive"
   }),
 
   instantsearch.widgets.hitsPerPage({

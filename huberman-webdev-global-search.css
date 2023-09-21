@@ -77,10 +77,6 @@
 
 /* Filters */
 
-.category-list {
-  overflow: hidden;
-}
-
 .ais-RefinementList-list, .ais-Menu-list {
   display: flex;
   flex-direction: row;
