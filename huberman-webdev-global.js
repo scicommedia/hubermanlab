@@ -267,3 +267,15 @@ supercastLogin.forEach((element) => {
     });
 }
 );
+
+// Supercast log out
+let logout = document.querySelector('[supercast-logout]');
+
+if (logout) {
+    logout.addEventListener('click', function() {
+        document.cookie = '_supercast_session=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        window.location.href = '/';
+    });
+}
+
+
