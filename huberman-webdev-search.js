@@ -5,17 +5,8 @@ const searchClient = algoliasearch(
     "e53cb2eceea20be62c0ea021fe2f5d14"
 );
 
-// get params from url
-const urlParams = new URLSearchParams(window.location.search);
-let indexValue = urlParams.get("index");
 
-if (!indexValue) {
-    indexValue = "hubermandev";
-}
-
-console.log(indexValue);
-
-let search = instantsearch({ indexName: indexValue, searchClient, insights: true });
+let search = instantsearch({ indexName: "hubermandev", searchClient, insights: true });
 
 // Search With Search bar and and categories facet filters
 

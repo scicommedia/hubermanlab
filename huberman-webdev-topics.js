@@ -251,7 +251,6 @@ function onRender() {
                 }
 
                 if (subtopicSection.hasAttribute("no-episodes") && subtopicSection.hasAttribute("no-timestamps")) {
-                    console.log("subtopicSection");
                     subtopicSection.remove();
                     // set background color of subtopicSection to orange
                     subtopicSection.style.backgroundColor = "#FFEBEE";

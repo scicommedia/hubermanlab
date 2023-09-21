@@ -320,7 +320,6 @@ function onRender() {
             uniqueDates.push(monthYear);
             // remove duplicates from uniqueDates array
             uniqueDates = [...new Set(uniqueDates)];
-            console.log(uniqueDates);
         });
 
         // get all li items with class .ais-InfiniteHits-item
