@@ -269,14 +269,14 @@ supercastLogin.forEach((element) => {
 );
 
 // Supercast log out
-let logout = document.querySelector('[supercast-logout]');
+// let logout = document.querySelector('[supercast-logout]');
 
-if (logout) {
-  logout.addEventListener('click', function() {
-      let cookie = document.cookie.split('; ').find(row => row.startsWith('_supercast_session'));
-      document.cookie = cookie + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-      window.location.href = '/';
-  });
-}
+// if (logout) {
+//   logout.addEventListener('click', function() {
+//       let cookie = document.cookie.split('; ').find(row => row.startsWith('_supercast_session'));
+//       document.cookie = cookie + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+//       window.location.href = '/';
+//   });
+// }
 
 
