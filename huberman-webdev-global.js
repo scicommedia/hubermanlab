@@ -280,14 +280,19 @@ supercastLogin.forEach((element) => {
 // }
 
 
-// Fathom Forms event
+// Blueprint Forms event
 
 window.addEventListener('load', (event) => {
 
   if (document.querySelector('[blueprint-form]')) {
-    document.querySelector('[blueprint-form]').addEventListener('submit', () => {
-      fathom.trackGoal('QB34O6ML', 0);
-    });
+
+      let blueprintForms = document.querySelectorAll('[blueprint-form]');
+
+      blueprintForms.forEach((form) => {
+          form.addEventListener('submit', () => {
+              fathom.trackGoal('QB34O6ML', 0);
+          });
+      });
   }
 
 });
