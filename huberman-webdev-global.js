@@ -197,33 +197,33 @@ if (document.querySelector('[top-banner]')) {
 
   // check if hubermanBannerDate exists local storage
   if (localStorage.getItem('hubermanBannerDate')) {
-      // get hubermanBannerDate from local storage
-      const hubermanBannerDate = localStorage.getItem('hubermanBannerDate');
-      const difference = Math.floor((Date.parse(today) - Date.parse(hubermanBannerDate)) / 86400000);
-      // check if difference is bigger than bannerExpiration
-      if (difference > bannerExpiration) {
-          // set hubermanBannerDate to local storage
-          localStorage.setItem('hubermanBannerDate', today);
-          // add class top-banner--hidden
-          topBanner.classList.add('cc-open');
-      }
+    // get hubermanBannerDate from local storage
+    const hubermanBannerDate = localStorage.getItem('hubermanBannerDate');
+    const difference = Math.floor((Date.parse(today) - Date.parse(hubermanBannerDate)) / 86400000);
+    // check if difference is bigger than bannerExpiration
+    if (difference > bannerExpiration) {
+      // set hubermanBannerDate to local storage
+      localStorage.setItem('hubermanBannerDate', today);
+      // add class top-banner--hidden
+      topBanner.classList.add('cc-open');
+    }
 
   } else {
-      topBanner.classList.add('cc-open');
+    topBanner.classList.add('cc-open');
   }
 
   // const closeBannerButton attribute close-banner-button
   const closeBannerButton = document.querySelector('[close-banner-button]');
   // add event listener click to closeBannerButton
   closeBannerButton.addEventListener('click', () => {
-      // add class top-banner--hidden
-      topBanner.classList.add('cc-close');
-      // set hubermanBannerDate to local storage
-      localStorage.setItem('hubermanBannerDate', today);
-      // remove topBanner after 1s
-      setTimeout(() => {
-          topBanner.remove();
-      }, 1000);
+    // add class top-banner--hidden
+    topBanner.classList.add('cc-close');
+    // set hubermanBannerDate to local storage
+    localStorage.setItem('hubermanBannerDate', today);
+    // remove topBanner after 1s
+    setTimeout(() => {
+      topBanner.remove();
+    }, 1000);
 
   });
 }
@@ -235,36 +235,36 @@ const gatedContent = document.querySelectorAll('[gated-content]');
 
 // if gatedContent is not empty
 if (gatedContent.length > 0) {
-    gatedContent.forEach((element) => {
-        // get the value of the attribute
-        const gatedContentValue = element.getAttribute('gated-content');
+  gatedContent.forEach((element) => {
+    // get the value of the attribute
+    const gatedContentValue = element.getAttribute('gated-content');
 
-        // get the element with the same value as the attribute
-        const gatedContentWrapperElement = document.querySelector(`[gated-content-wrapper="${gatedContentValue}"]`);
+    // get the element with the same value as the attribute
+    const gatedContentWrapperElement = document.querySelector(`[gated-content-wrapper="${gatedContentValue}"]`);
 
-        // if the element exists
-        if (gatedContentWrapperElement) {
-            // get innerHTML of the element
-            const content = element.innerHTML;
+    // if the element exists
+    if (gatedContentWrapperElement) {
+      // get innerHTML of the element
+      const content = element.innerHTML;
 
-            // append the content to gatedContentWrapperElement
-            gatedContentWrapperElement.innerHTML = content;
-        }
+      // append the content to gatedContentWrapperElement
+      gatedContentWrapperElement.innerHTML = content;
+    }
 
-        // remove the element
-        element.remove();
-            
-        Webflow.require('ix2').init();
-    });
+    // remove the element
+    element.remove();
+
+    Webflow.require('ix2').init();
+  });
 }
 
 // const supercastLogin attribute supercast="login"
 const supercastLogin = document.querySelectorAll('[supercast="login"]');
 
 supercastLogin.forEach((element) => {
-    element.addEventListener("click", (event) => {
-      Supercast.startLogin({subdomain: "hubermanlab"})
-    });
+  element.addEventListener("click", (event) => {
+    Supercast.startLogin({ subdomain: "hubermanlab" })
+  });
 }
 );
 
@@ -280,3 +280,14 @@ supercastLogin.forEach((element) => {
 // }
 
 
+// Fathom Forms event
+
+window.addEventListener('load', (event) => {
+
+  if (document.querySelector('[blueprint-form]')) {
+    document.querySelector('[blueprint-form]').addEventListener('submit', () => {
+      fathom.trackGoal('QB34O6ML', 0);
+    });
+  }
+
+});
