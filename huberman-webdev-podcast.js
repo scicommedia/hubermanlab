@@ -15,7 +15,7 @@ const latestBig = instantsearch({
 latestBig.addWidgets([
   instantsearch.widgets.configure({
       filters:
-          "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series' OR category.name:'Guest Series'"
+          "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series' OR category.name:'Journal Club' OR category.name:'AMA'"
   }),
 
   instantsearch.widgets.hits({
@@ -82,7 +82,7 @@ recentEpisodes.addWidgets([
 
   instantsearch.widgets.configure({
       filters:
-          "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series'"
+          "category.name:'Solo Episode' OR category.name:'Guest Episode' OR category.name:'Guest Series' OR category.name:'Journal Club' OR category.name:'AMA"
   }),
 
   instantsearch.widgets.hits({
