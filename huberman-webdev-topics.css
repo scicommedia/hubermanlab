@@ -188,6 +188,7 @@ label.ais-RefinementList-label {
 .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
   width: 157px;
   height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-title {
@@ -236,6 +237,7 @@ label.ais-RefinementList-label {
   .ais-Hits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .ais-InfiniteHits-list {
@@ -254,6 +256,7 @@ label.ais-RefinementList-label {
   .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .subtopic-episodes {
