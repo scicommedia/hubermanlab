@@ -23,8 +23,8 @@ latestBig.addWidgets([
       templates: {
           item: `
           <div class="hit latest-episode-grid" algolia-category="{{category.name}}" episode-card>
-              <a href="{{link}}" class="hit-image" card-wrapper>
-                  <img src="{{thumbnail}}" alt="{{name}}" />
+              <a href="{{link}}" class="u-aspect-thumbnail" card-wrapper>
+                  <img class="u-img-cover" src="{{thumbnail}}" alt="{{name}}" />
                   <div class="u-img-cover" card-overlay></div>
               </a>
               <div class="hit-content">
@@ -90,8 +90,8 @@ recentEpisodes.addWidgets([
       templates: {
           item: `
       <div class="hit recent-episodes-grid" algolia-category="{{category.name}}" episode-card>
-          <a href="{{link}}" class="hit-image" card-wrapper>
-              <img src="{{thumbnail}}" alt="{{name}}" />
+          <a href="{{link}}" class="u-aspect-thumbnail" card-wrapper>
+              <img class="u-img-cover" src="{{thumbnail}}" alt="{{name}}" />
               <div class="u-img-cover" card-overlay></div>
           </a>
           <a href="{{link}}" class="hit-content" card-wrapper>

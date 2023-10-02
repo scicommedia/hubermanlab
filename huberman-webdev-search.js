@@ -6,7 +6,7 @@ const searchClient = algoliasearch(
 );
 
 
-let search = instantsearch({ indexName: "hubermandev", searchClient, insights: true });
+let search = instantsearch({ indexName: "hubermandev", searchClient, insights: true, routing: true });
 
 // Search With Search bar and and categories facet filters
 
