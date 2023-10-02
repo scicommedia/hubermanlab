@@ -181,8 +181,8 @@ label.ais-RefinementList-label {
 }
 
 .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
-  flex-direction: row;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
@@ -212,6 +212,10 @@ label.ais-RefinementList-label {
   .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+    display: flex;
   }
 
   .subtopic-episodes {
