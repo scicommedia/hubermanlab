@@ -105,17 +105,17 @@ label.ais-RefinementList-label {
   display: none;
 }
 
-.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit {
+[algolia-category="Timestamp"].hit {
   flex-direction: row;
   align-items: flex-start;
 }
 
-.ais-Hits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
+[algolia-category="Timestamp"] .u-aspect-thumbnail {
   width: 157px;
   height: auto;
 }
 
-.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-title {
+[algolia-category="Timestamp"] .hit-title {
   font-size: 16px;
 }
 
@@ -180,18 +180,18 @@ label.ais-RefinementList-label {
   padding: 0px;
 }
 
-.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+[algolia-category="Timestamp"].hit {
   display: grid;
   grid-template-columns: auto 1fr;
 }
 
-.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
+[algolia-category="Timestamp"] .u-aspect-thumbnail {
   width: 157px;
   height: auto;
   aspect-ratio: 16 / 9;
 }
 
-.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-title {
+[algolia-category="Timestamp"] .hit-title {
   font-size: 16px;
 }
 
@@ -214,7 +214,7 @@ label.ais-RefinementList-label {
     grid-column-end: 3;
   }
 
-  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+  [algolia-category="Timestamp"].hit {
     display: flex;
   }
 
@@ -234,11 +234,11 @@ label.ais-RefinementList-label {
     grid-column-end: 2;
   }
 
-  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit {
+  [algolia-category="Timestamp"].hit {
     flex-direction: column;
   }
 
-  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
+  [algolia-category="Timestamp"] .u-aspect-thumbnail {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
@@ -253,11 +253,11 @@ label.ais-RefinementList-label {
     grid-column-end: 2;
   }
 
-  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit {
+  [algolia-category="Timestamp"].hit {
     flex-direction: column;
   }
 
-  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
+  [algolia-category="Timestamp"] .u-aspect-thumbnail {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
