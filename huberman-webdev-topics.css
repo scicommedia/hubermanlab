@@ -250,6 +250,7 @@ label.ais-RefinementList-label {
   }
 
   [algolia-category="Timestamp"].hit {
+    display: flex;
     flex-direction: column;
   }
 
