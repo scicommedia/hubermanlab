@@ -7,7 +7,8 @@ const searchClient = algoliasearch(
 
 const search = instantsearch({
   indexName: "hubermandev_postDate_desc",
-  searchClient
+  searchClient,
+  routing: true
 });
 
 // Search With Search bar and and categories facet filters

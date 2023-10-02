@@ -83,12 +83,6 @@ label.ais-RefinementList-label {
   row-gap: 16px;
 }
 
-.hit-image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-}
-
 .subtopic-episodes {
   list-style-type: none;
   display: grid;
@@ -116,10 +110,9 @@ label.ais-RefinementList-label {
   align-items: flex-start;
 }
 
-.ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+.ais-Hits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
   width: 157px;
   height: auto;
-  aspect-ratio: 16 / 9;
 }
 
 .ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-title {
@@ -192,10 +185,9 @@ label.ais-RefinementList-label {
   align-items: flex-start;
 }
 
-.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+.ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
   width: 157px;
   height: auto;
-  aspect-ratio: 16 / 9;
 }
 
 .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-title {
@@ -241,10 +233,9 @@ label.ais-RefinementList-label {
     flex-direction: column;
   }
 
-  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+  .ais-Hits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
   }
 
   .ais-InfiniteHits-list {
@@ -260,10 +251,9 @@ label.ais-RefinementList-label {
     flex-direction: column;
   }
 
-  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .hit-image {
+  .ais-InfiniteHits-item:has(> [algolia-category="Timestamp"]) .u-aspect-thumbnail {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
   }
 
   .subtopic-episodes {
