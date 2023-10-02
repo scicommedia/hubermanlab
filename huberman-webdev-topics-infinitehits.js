@@ -31,8 +31,8 @@ search.addWidgets([
         templates: {
             item: `
           <div class="hit" episode-card algolia-category="{{category.name}}" algolia-subtopics='[{{#subtopics}}&#34;{{name}}&#34;, {{/subtopics}}]' algolia-sort-date="{{postDate}}">
-              <a href="{{link}}" class="hit-image" card-wrapper>
-                  <img src="{{thumbnail}}" alt="{{name}}" />
+              <a href="{{link}}" class="u-aspect-thumbnail" card-wrapper>
+                  <img class="u-img-cover" src="{{thumbnail}}" alt="{{name}}" />
                   <div class="u-img-cover" card-overlay></div>
               </a>
               <a href="{{link}}" class="hit-content" card-wrapper>
