@@ -214,10 +214,6 @@ label.ais-RefinementList-label {
     grid-column-end: 3;
   }
 
-  [algolia-category="Timestamp"].hit {
-    display: flex;
-  }
-
   .subtopic-episodes {
     grid-template-columns: 1fr 1fr;
   }
