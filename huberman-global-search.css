@@ -171,6 +171,10 @@
 
 /* Hits */
 
+.ais-Hits--empty {
+  margin-top: 32px;
+}
+
 .ais-Snippet-highlighted {
   background-color: #80D7F7;
 }
